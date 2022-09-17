@@ -79,15 +79,25 @@ function Home() {
             </div>
             <div className='money'>
                 <div className='balance'>
-                    <p>{userData.balance>=0 ? userData.balance : ""}</p>
-                    <input type="number" defaultValue={userData.balance} onChange={(e)=>{setBalance(parseInt(e.target.value)); console.log(balance);}}></input>
-                    <button onClick={updateBalance}>Update Balance</button>
+                    <p className='tag'>Balance</p>
+                    <h1>{userData.balance>=0 ? userData.balance+"$" : ""}</h1>
+                    
                 </div>
                 
                 <div className='budget'>
-                    <p>{userData.budget>=0 ? userData.budget : ""}</p>
-                    <input type="number" defaultValue={userData.budget} onChange={(e)=>{setBudget(parseInt(e.target.value)); console.log(budget);}}></input>
-                    <button onClick={updateBudget}>Update Budget</button>
+                    <p className='tag'>Budget</p>
+                    <h1>{userData.budget>=0 ? userData.budget+"$" : ""}</h1>
+                </div>
+
+                <div className='update'>
+                    <div className='bal-up'>
+                        <input type="number" defaultValue={userData.balance} onChange={(e)=>{setBalance(parseInt(e.target.value)); console.log(balance);}}></input>
+                        <button onClick={updateBalance}>Update Balance</button>
+                    </div>
+                    <div className='bud-up'>
+                        <input type="number" defaultValue={userData.budget} onChange={(e)=>{setBudget(parseInt(e.target.value)); console.log(budget);}}></input>
+                        <button onClick={updateBudget}>Update Budget</button>
+                    </div>
                 </div>
             </div>
         </div>

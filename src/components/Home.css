@@ -38,3 +38,92 @@
     color:#202020;
     background: white;
 }
+
+.money{
+    margin: 20px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.money .bud-up, .money .bal-up{
+    display: flex;
+    align-items: center;
+}
+
+.money .bal-up{
+    margin-bottom: 30px;
+}
+
+.money .bud-up >*, .money .bal-up >*{
+    flex: 1.5;
+}
+
+.money .bud-up input, .money .bal-up input{
+    flex: 1;
+}
+
+.money .tag{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.money input[type="number"]{
+    text-align: center;
+    font-size: 26px;
+    padding:10px 10px;
+    width: auto;
+    border-radius: 10px;
+    border: 1px solid gray;
+    min-width: 0px;
+    margin-right: 20px;
+}
+
+.money .update{
+    flex: 2;
+    margin-left: 40px;
+    background: #202020;
+    padding:40px 40px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    color: #202020;
+    flex:1;
+}
+
+.money .update button{
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: none;
+    background: #202020;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.balance, .budget{
+    padding:50px 40px;
+    margin:40px 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    color: #202020;
+    flex:1;
+}
+
+.budget{
+    background: #202020;
+    color: white;
+    margin-left: 30px;
+}
+
+.balance h1, .budget h1{
+    text-align: center;
+    font-size: 52px;
+    margin-bottom: 20px;
+}
