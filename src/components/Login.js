@@ -10,7 +10,7 @@ function Login() {
     useEffect(()=>{
         supabase.auth.onAuthStateChange(async (event, session) => {
             if(event==="SIGNED_IN"){
-                await supabase.from('client').upsert({ user_id: session.user.id, balance: 0, budget: 0, email:session.user.email })
+                await supabase.from('client').upsert({ user_id: session.user.id, email:session.user.email })
                 navigate('/');
             }
         })

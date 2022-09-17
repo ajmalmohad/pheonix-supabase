@@ -29,7 +29,7 @@ function Home() {
             .eq('user_id', user.id)
             .single();
         setUserData(data);
-        console.log(user);
+        console.log(userData);
     }
 
     async function deAuthenticate() {
@@ -59,7 +59,7 @@ function Home() {
         }
         await supabase
         .from('client')
-        .update({balance:balance})
+        .update({budget:budget})
         .eq('user_id', user.id);
         setUserData({
             ...userData,
