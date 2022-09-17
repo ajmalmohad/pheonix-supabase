@@ -29,7 +29,7 @@ function Home() {
             .eq('user_id', user.id)
             .single();
         setUserData(data);
-        console.log(userData);
+        console.log(user);
     }
 
     async function deAuthenticate() {
@@ -72,17 +72,23 @@ function Home() {
         <div>
             <div className='header'>
                 <div className='left'>
-                    <p>CashFlow</p>
+                    <img src={user.user_metadata ? user.user_metadata.avatar_url: ""} alt="User" referrerPolicy="no-referrer"/>
+                    <p className='welcome'>Welcome back {user.user_metadata ? user.user_metadata.full_name + "!" : "!"}</p>
                 </div>
-                <button onClick={deAuthenticate}>LogOut</button>
+                <button className='logout' onClick={deAuthenticate}>Log Out</button>
             </div>
-            <div className='balance'>
-                <p>{userData.balance>=0 ? userData.balance : ""}</p>
-                <p>{userData.budget>=0 ? userData.budget : ""}</p>
-                <input type="number" defaultValue={0} onChange={(e)=>{setBalance(parseInt(e.target.value)); console.log(balance);}}></input>
-                <input type="number" defaultValue={0} onChange={(e)=>{setBudget(parseInt(e.target.value)); console.log(budget);}}></input>
-                <button onClick={updateBalance}>Update Balance</button>
-                <button onClick={updateBudget}>Update Budget</button>
+            <div className='money'>
+                <div className='balance'>
+                    <p>{userData.balance>=0 ? userData.balance : ""}</p>
+                    <input type="number" defaultValue={userData.balance} onChange={(e)=>{setBalance(parseInt(e.target.value)); console.log(balance);}}></input>
+                    <button onClick={updateBalance}>Update Balance</button>
+                </div>
+                
+                <div className='budget'>
+                    <p>{userData.budget>=0 ? userData.budget : ""}</p>
+                    <input type="number" defaultValue={userData.budget} onChange={(e)=>{setBudget(parseInt(e.target.value)); console.log(budget);}}></input>
+                    <button onClick={updateBudget}>Update Budget</button>
+                </div>
             </div>
         </div>
     )

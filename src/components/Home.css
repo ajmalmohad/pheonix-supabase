@@ -1,9 +1,40 @@
+.Home{
+    background: black;
+}
+
 .header{
     height: 80px;
-    background: wheat;
+    background: #202020;
     display: flex;
     padding:20px 40px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid gray;
+    color: white;
+    margin:6px;
+    border-radius: 10px;
+}
+
+.header .left{
+    display: flex;
+    align-items: center;
+}
+
+.header .left img{
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.welcome{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logout{
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    color:#202020;
+    background: white;
 }

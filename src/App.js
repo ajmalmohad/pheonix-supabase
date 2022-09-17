@@ -6,6 +6,7 @@ import {
 import Protected from "./components/Protected";
 import Login from "./components/Login";
 import Home from "./components/Home";
+import './App.css'
 
 function App() {
   return (
