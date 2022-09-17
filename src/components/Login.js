@@ -29,8 +29,8 @@ function Login() {
     return (
         <div className='Login'>
             <h1>Welcome to Cash Flow!</h1>
-            <div className='button'>
-                <img src={Google}/><button onClick={signInWithGoogle}>SignIn</button>
+            <div className='button' onClick={signInWithGoogle}>
+                <img src={Google}/><button>SignIn</button>
             </div>
         </div>
     )
