@@ -2,6 +2,7 @@ import './Login.css'
 import {supabase} from './../supabase/supabase'
 import {Navigate, useNavigate} from 'react-router-dom'
 import { useEffect } from 'react';
+import Google from './google.jpg'
 
 function Login() {
     const navigate = useNavigate();
@@ -26,9 +27,11 @@ function Login() {
     }
 
     return (
-        <div>
-            <h1>Good to See You</h1>
-            <button onClick={signInWithGoogle}>SignIn</button>
+        <div className='Login'>
+            <h1>Welcome to Cash Flow!</h1>
+            <div className='button'>
+                <img src={Google}/><button onClick={signInWithGoogle}>SignIn</button>
+            </div>
         </div>
     )
 }
